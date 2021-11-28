@@ -1,7 +1,7 @@
 # Github Actions to update package on pypi 
 This repo is a reference code to automatically push the latest package release to pypi on creating a github release tags.
 
-### Step 1: Add required files
+#### Step 1: Add required files
 
   Pypi requires following files to build a package
   - setup.py
@@ -37,7 +37,7 @@ This repo is a reference code to automatically push the latest package release t
           twine upload dist/*
   ```
 
-### Step 2: Update PYPI Creds
+#### Step 2: Update PYPI Creds
 
   Next add pypi credentials in github secrets with following Keys under settings -> secrets.
   - PYPI_USERNAME
@@ -45,13 +45,13 @@ This repo is a reference code to automatically push the latest package release t
 
   ![github action secret](docs/images/actions_secrets.JPG)
 
-### Step 3: Create a release tag
+#### Step 3: Create a release tag
   On creation of release tag, github action will automatically start building distribution files and push them to pypi
 
-### Step 4: Check Actions
+#### Step 4: Check Actions
 Check whether workflow actions has initiated or not.
 
-### Step 5: Validate by package installation
+#### Step 5: Validate by package installation
   To validate whether package has been pushed to pypi or not.
 
   Visit pypi website and search for the package name
