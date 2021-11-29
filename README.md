@@ -55,7 +55,7 @@
   - PYPI_USERNAME
   - PYPI_PASSWORD
 
-  ![github action secret](docs/images/actions_secrets.JPG)
+  ![github action secret](https://github.com/vivekkya/auto-release-to-pypi/blob/main/docs/images/actions_secrets.JPG?raw=True)
 
 ---
 
@@ -65,7 +65,7 @@ After files are inplace and pypi credentials has been updated in github repo sec
 
 Below GIF covers all the key steps involved
 
-![demo gif](docs/videos/demo.gif)
+![demo gif](https://github.com/vivekkya/auto-release-to-pypi/blob/main/docs/videos/demo.gif?raw=True)
 
 
 1. **Create a release tag** :
