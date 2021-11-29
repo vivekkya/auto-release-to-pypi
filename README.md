@@ -1,7 +1,17 @@
 # Github Actions to update package on pypi 
-This repo is a reference code to automatically push the latest package release to pypi on creating a github release tags.
+  This repo is a reference code to automatically push the latest package release to pypi on creating a github release tags.
 
-#### Step 1: Add required files
+
+  #### Table of Content
+  - Add reuired files for pypi
+  - Update pypi Credentials in github secrets
+  - Create a release tag
+  - Check Actions
+  - Validate updated package on pypi
+
+---
+
+### Step 1: Add required files
 
   Pypi requires following files to build a package
   - setup.py
@@ -36,8 +46,9 @@ This repo is a reference code to automatically push the latest package release t
           python setup.py sdist bdist_wheel
           twine upload dist/*
   ```
+---
 
-#### Step 2: Update PYPI Creds
+### Step3 : Update PYPI Creds
 
   Next add pypi credentials in github secrets with following Keys under settings -> secrets.
   - PYPI_USERNAME
@@ -45,17 +56,26 @@ This repo is a reference code to automatically push the latest package release t
 
   ![github action secret](docs/images/actions_secrets.JPG)
 
-#### Step 3: Create a release tag
-  On creation of release tag, github action will automatically start building distribution files and push them to pypi
+---
 
-#### Step 4: Check Actions
-Check whether workflow actions has initiated or not.
+### Step 4: Create package release
 
-#### Step 5: Validate by package installation
-  To validate whether package has been pushed to pypi or not.
+After files are inplace and pypi credentials has been updated in github repo secrets, next step is to create a release tag in the repo, which will trigger github actions to run workflow defined in `.github\workflows\publish-to-pypi.yml`, leading to deployment of package in pypi.
 
-  Visit pypi website and search for the package name
+Below GIF covers all the key steps involved
+
+![demo gif](docs/videos/demo.gif)
+
+
+1. **Create a release tag** :
+On creation of release tag, github action will automatically start building distribution files and push them to pypi
+
+2. **Check Actions** : Check whether workflow actions has initiated or not.
+
+3. **Validate package updation in pypi** :  To validate whether package has been pushed to pypi or not. Visit pypi website and search for the package name 
+
+4. **Install updated package** : Run below pip command to install package.
   
   ```
-  pip install packagename
+  pip install packagename==version
   ```
