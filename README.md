@@ -1,13 +1,14 @@
 # Github Actions to update package on pypi 
   This repo is a reference code to automatically push the latest package release to pypi on creating a github release tags.
 
+<br>
 
   #### Table of Content
-  - Add reuired files for pypi
-  - Update pypi Credentials in github secrets
-  - Create a release tag
-  - Check Actions
-  - Validate updated package on pypi
+  - [Add required files for pypi](#-step-1:-add-required-files)
+  - [Update PYPI Credentials](#-step-2:-update-pypi-credentials)
+  - [Create package release](#-step-3:-create-package-release)
+
+<br>
 
 ---
 
@@ -48,7 +49,7 @@
   ```
 ---
 
-### Step3 : Update PYPI Creds
+### Step 2: Update PYPI Credentials
 
   Next add pypi credentials in github secrets with following Keys under settings -> secrets.
   - PYPI_USERNAME
@@ -58,7 +59,7 @@
 
 ---
 
-### Step 4: Create package release
+### Step 3: Create package release
 
 After files are inplace and pypi credentials has been updated in github repo secrets, next step is to create a release tag in the repo, which will trigger github actions to run workflow defined in `.github\workflows\publish-to-pypi.yml`, leading to deployment of package in pypi.
 
