@@ -4,9 +4,9 @@
 <br>
 
   #### Table of Content
-  - [Add required files for pypi](#-step-1:-add-required-files)
-  - [Update PYPI Credentials](#-step-2:-update-pypi-credentials)
-  - [Create package release](#-step-3:-create-package-release)
+  - [Add required files for pypi](#step-1-add-required-files)
+  - [Update PYPI Credentials](#step-2-update-pypi-credentials)
+  - [Create package release](#step-3-create-package-release)
 
 <br>
 
